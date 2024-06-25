@@ -414,7 +414,7 @@ public with sharing class SOQL {
             FROM Lead 
             WHERE Id IN :leadIds];
  
-        List<String> emailDomains = new List<String>();
+        set<String> emailDomains = new set<String>();
         for (lead l:leads) {
             emailDomains.add('www.' + l.Email.split('@').get(1));
         }
