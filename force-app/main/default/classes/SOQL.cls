@@ -44,7 +44,7 @@ public with sharing class SOQL {
      * @return A list of Contact records.
      * Update the corresponding test class and testGetContactsByFirstName method to cover this method
      */
-    public static List<Contact> GetContactsByFirstName () {
+    public static List<Contact> getContactsByFirstName () {
 
         List<Contact> allContacts = [
             SELECT Id, FirstName, LastName, Account.Name, Phone, Email, Name
@@ -114,7 +114,7 @@ public with sharing class SOQL {
      * @return A map of Task Ids to Task records.
      * Update the corresponding test class and testGetTasksDueNextWeek method to cover this method
      */
-    public static Map<Id,Task> GetTasksDueNextWeek () {
+    public static Map<Id,Task> getTasksDueNextWeek () {
 
             Map<Id,Task> tasksDueNextWeek = new Map<Id,Task>([
                 SELECT Id, Subject, ActivityDate 
@@ -130,7 +130,7 @@ public with sharing class SOQL {
      * @return A list of Contact records.
      * Update the corresponding test class and testGetContactsByEmailDomain method to cover this method
      */
-    public static List<Contact> GetContactsByEmailDomain () {
+    public static List<Contact> getContactsByEmailDomain () {
 
             List<Contact> contactsByEmailDomain = [
                 SELECT Id, Name, Email 
